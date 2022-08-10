@@ -5,12 +5,12 @@
 //   const searchGifsResponse = Convert.toSearchGifsResponse(json);
 
 export interface SearchGifsResponse {
-  data:       Datum[];
+  data:       Gif[];
   pagination: Pagination;
   meta:       Meta;
 }
 
-export interface Datum {
+export interface Gif {
   type:                       string;
   id:                         string;
   url:                        string;
