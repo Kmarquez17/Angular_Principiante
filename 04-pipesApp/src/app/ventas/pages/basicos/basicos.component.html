@@ -1,1 +1,67 @@
-<p>basicos works!</p>
+<div class="text-layout">
+  <h1>Pipe basicos</h1>
+  <p>Pipe incluidos en Angulo - Usualmente en el Common Module</p>
+</div>
+
+<div class="p-grid">
+  <div class="p-col-4">
+    <p-card header="uppercase" [subheader]="nombreLower | uppercase">
+      {{ nombreLower | uppercase }}
+    </p-card>
+  </div>
+  <div class="p-col-4">
+    <p-card header="lowercase" [subheader]="nombreUpper | lowercase">
+      {{ nombreUpper | lowercase }}
+    </p-card>
+  </div>
+  <div class="p-col-4">
+    <p-card header="titlecase" [subheader]="nombreCompleted | titlecase">
+      {{ nombreCompleted | titlecase }}
+    </p-card>
+  </div>
+</div>
+
+<div class="text-layout">
+  <h1>Date | Fechas | Pipe</h1>
+  <p>Pipe para mostrar fechas</p>
+</div>
+
+<div class="p-grid">
+  <div class="p-col-6">
+    <p-card>
+      <ul>
+        <li>fecha</li>
+        <li>fecha | date</li>
+        <li>fecha | date: "short"</li>
+        <li>fecha | date: "long"</li>
+        <li>fecha | date: "dd/MM/YYYY"</li>
+        <li>fecha | date: "MMMM dd, yyyy"</li>
+      </ul>
+
+      <hr />
+      <ul>
+        <li>fecha | date: "long":'GMT-6'</li>
+        <li>fecha | date: "long":'GMT-4'</li>
+        <li>fecha | date: "long":"":'fr'</li>
+      </ul>
+    </p-card>
+  </div>
+  <div class="p-col-6">
+    <p-card>
+      <ul>
+        <li>{{ fecha }}</li>
+        <li>{{ fecha | date }}</li>
+        <li>{{ fecha | date: "short" }}</li>
+        <li>{{ fecha | date: "long" }}</li>
+        <li>{{ fecha | date: "dd/MM/YYYY" }}</li>
+        <li>{{ fecha | date: "MMMM dd, yyyy" }}</li>
+      </ul>
+      <hr />
+      <ul>
+        <li>{{ fecha | date: "long":"GMT-6" }}</li>
+        <li>{{ fecha | date: "long":"GMT-4" }}</li>
+        <li>{{ fecha | date: "long":"":'fr' }}</li>
+      </ul>
+    </p-card>
+  </div>
+</div>
